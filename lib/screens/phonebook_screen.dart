@@ -97,7 +97,7 @@ class _PhoneBook_ScreenState extends State<PhoneBook_Screen> {
                         decoration: containerdeco,
                         child: Align(
                             alignment: Alignment.center,
-                            child: Text("রাজশাহী বিভাগ", style: textStyle)),
+                            child: Text("রাজশাহী\nবিভাগ", style: textStyle)),
                       ),
                     ),
                   ),
@@ -123,7 +123,7 @@ class _PhoneBook_ScreenState extends State<PhoneBook_Screen> {
                         decoration: containerdeco,
                         child: Align(
                             alignment: Alignment.center,
-                            child: Text("বরিশাল বিভাগ", style: textStyle)),
+                            child: Text("বরিশাল\nবিভাগ", style: textStyle)),
                       ),
                     ),
                   )
@@ -154,7 +154,7 @@ class _PhoneBook_ScreenState extends State<PhoneBook_Screen> {
                         decoration: containerdeco,
                         child: Align(
                             alignment: Alignment.center,
-                            child: Text("ময়মনসিংহ বিভাগ", style: textStyle)),
+                            child: Text("ময়মনসিংহ\nবিভাগ", style: textStyle)),
                       ),
                     ),
                   ),

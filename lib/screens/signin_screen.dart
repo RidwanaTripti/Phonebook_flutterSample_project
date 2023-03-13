@@ -22,110 +22,108 @@ class _Signin_screenState extends State<Signin_screen> {
   );
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Scaffold(
-          resizeToAvoidBottomInset: false,
-          body: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text.rich(
-                        TextSpan(
-                          text: "আপনার ",
-                          style: TextStyle(fontSize: 25.0, color: Colors.black),
-                          children: [
-                            TextSpan(
-                                text: "একাউন্টে",
-                                style: TextStyle(color: Colors.blue)),
-                          ],
+    return SafeArea(
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text.rich(
+                      TextSpan(
+                        text: "আপনার ",
+                        style: TextStyle(fontSize: 25.0, color: Colors.black),
+                        children: [
+                          TextSpan(
+                              text: "একাউন্টে",
+                              style: TextStyle(color: Colors.blue)),
+                        ],
+                      ),
+                    ),
+                    Text.rich(
+                      TextSpan(
+                        text: "সাইন-ইন করুন",
+                        style: TextStyle(fontSize: 25.0, color: Colors.black),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Expanded(
+                  child: Container(
+                    child: TextField(
+                      // keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        hintText: "আপনার মোবাইল নাম্বার দিন",
+                        hintStyle: TextStyle(color: Colors.black),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
                         ),
                       ),
-                      Text.rich(
-                        TextSpan(
-                          text: "সাইন-ইন করুন",
-                          style: TextStyle(fontSize: 25.0, color: Colors.black),
-                        ),
+                    ),
+                  ),
+                ),
+              ),
+              // SizedBox(height: 30),
+              Padding(
+                padding: const EdgeInsets.all(40.0),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return OTP_Screen();
+                    }));
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "চালিয়ে যান ",
+                        style: TextStyle(fontSize: 15),
+                      ),
+                      Icon(
+                        FontAwesomeIcons.chevronRight,
+                        size: 12.0,
+                      )
+                    ],
+                  ),
+                  style: buttonStyle,
+                ),
+              ),
+              // SizedBox(height: 300),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text("চালিয়ে যান-এ ক্লিক করার মাধ্যমে আপনি আমাদের"),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "নিয়ম এবং শর্তাবলি",
+                                style: TextStyle(fontSize: 14.0),
+                              )),
+                          Text("তে রাজি হচ্ছেন"),
+                        ],
                       ),
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Expanded(
-                    child: Container(
-                      child: TextField(
-                        // keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
-                          hintText: "আপনার মোবাইল নাম্বার দিন",
-                          hintStyle: TextStyle(color: Colors.black),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                // SizedBox(height: 30),
-                Padding(
-                  padding: const EdgeInsets.all(40.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return OTP_Screen();
-                      }));
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "চালিয়ে যান ",
-                          style: TextStyle(fontSize: 15),
-                        ),
-                        Icon(
-                          FontAwesomeIcons.chevronRight,
-                          size: 12.0,
-                        )
-                      ],
-                    ),
-                    style: buttonStyle,
-                  ),
-                ),
-                // SizedBox(height: 300),
-                Padding(
-                  padding: const EdgeInsets.all(40.0),
-                  child: Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text("চালিয়ে যান-এ ক্লিক করার মাধ্যমে আপনি আমাদের"),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            TextButton(
-                                onPressed: () {},
-                                child: Text(
-                                  "নিয়ম এবং শর্তাবলি",
-                                  style: TextStyle(fontSize: 14.0),
-                                )),
-                            Text("তে রাজি হচ্ছেন"),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

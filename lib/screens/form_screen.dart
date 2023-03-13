@@ -24,6 +24,7 @@ class _FormField_ScreenState extends State<FormField_Screen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(32.0),
