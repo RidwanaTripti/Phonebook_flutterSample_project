@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:project_sample_01/screens/phonebook_screen.dart';
+import '/screens/signin_screen.dart';
 
 class Login_Screen extends StatefulWidget {
   const Login_Screen({super.key});
@@ -61,7 +63,7 @@ class _Login_ScreenState extends State<Login_Screen> {
                     child: Column(
                       children: [
                         TextField(
-                          keyboardType: TextInputType.number,
+                          // keyboardType: TextInputType.number,
                           decoration: InputDecoration(
                             hintText: "আপনার মোবাইল নাম্বার দিন",
                             hintStyle: TextStyle(color: Colors.black),
@@ -88,7 +90,12 @@ class _Login_ScreenState extends State<Login_Screen> {
                           child: Column(
                             children: [
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return PhoneBook_Screen();
+                                  }));
+                                },
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -119,7 +126,12 @@ class _Login_ScreenState extends State<Login_Screen> {
                               ),
                               SizedBox(height: 30),
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) {
+                                    return Signin_screen();
+                                  }));
+                                },
                                 child: Text("নতুন একাউন্ট তৈরী করুন"),
                                 style: ElevatedButton.styleFrom(
                                   minimumSize: Size(250.0, 50.0),
